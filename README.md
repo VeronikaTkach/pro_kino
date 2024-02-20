@@ -2,5 +2,7 @@
 Мастер-класс от Methed
 
 JavaScript
+
 HTML
+
 CSS
