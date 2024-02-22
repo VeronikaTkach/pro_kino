@@ -3,14 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" href="images/camera.svg">
+  <!-- рекомендуется добавлять несколько строк с разными форматами иконок -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <!-- для улучшения разметки под разные браузеры -->
+
+  <link rel="stylesheet" href="css/index.css">
+
   <title>ПРО КИНО - Аватар: Легенда об Аанге</title>
 
-  <style>
-    body {
-      background-color: black;
-      color: white;
-    }
-  </style>
 </head>
 <body>
   <header class="header">
@@ -23,7 +26,8 @@
 
   <main>
     <section class="hero">
-      <div class="container">
+      <div class="container hero__container">
+        <h1 class="visually-hidden">Сериал от Netflix - Аватар: Легенда об Аанге</h1>
         <img class="hero__banner" src="images/description.png" alt="Avatar the last airbender" >
 
         <p class="hero__date">
@@ -35,30 +39,38 @@
             <circle id="Ellipse 1" cx="32.000000" cy="32.000000" r="31.500000" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="1.000000"/>
             <path id="Vector" d="M20.1921 26.4548C20.1921 26.2532 20.2719 26.0469 20.4265 25.8922C20.7358 25.5829 21.2422 25.5829 21.5515 25.8922L32.1406 36.4813L42.575 26.0469C42.8843 25.7375 43.3906 25.7375 43.7 26.0469C44.0093 26.3563 44.0093 26.8625 43.7 27.1719L32.7031 38.1735C32.3937 38.4829 31.8875 38.4829 31.5781 38.1735L20.4265 27.0219C20.2671 26.8625 20.1921 26.661 20.1921 26.4548Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero"/>
           </svg>
-        </a>
       </div>
     </section>
     <section class="about" id="about">
-      <div class="container">
-        <div class="about__info">
-          <div class="about__title">Аватар: Легенда об Аанге</div>
-          <p class="about__text">Сюжет рассказывает о мальчике из племени воздушных кочевников, Аанге, способном покорять стихию воздуха. В возрасте 11 лет, он узнал, что он Аватар — властелин четырёх стихий. Мир погряз в многолетней войне нации Огня против остального мира, в котором определённые люди способны покорять одну из четырёх стихий — воду, землю, огонь или воздух. Аанг — единственный, кто способен покорить все элементы и будучи Аватаром, он должен спасти мир от уничтожения нацией Огня. Со своими новыми друзьями, Катарой и Соккой, Аанг отправляется овладевать стихиями, попутно их преследует изгнанный принц нации Огня — Зуко, который хочет вернуть себе честь, поймав Аватара.</p>
+      <div class="container about__container">
+        <div class="about__content">
+          <h2 class="about__title">Аватар: Легенда об&nbsp;Аанге</h2>
+
+          <p class="about__text">
+            Сюжет рассказывает о&nbsp;мальчике из&nbsp;племени воздушных кочевников, Аанге, способном покорять стихию воздуха. В&nbsp;возрасте 11&nbsp;лет, он&nbsp;узнал, что он&nbsp;Аватар&nbsp;&mdash; властелин четырёх стихий. Мир погряз в&nbsp;многолетней войне нации Огня против остального мира, в&nbsp;котором определённые люди способны покорять одну из&nbsp;четырёх стихий&nbsp;&mdash; воду, землю, огонь или воздух. Аанг&nbsp;&mdash; единственный, кто способен покорить все элементы и&nbsp;будучи Аватаром, он&nbsp;должен спасти мир от&nbsp;уничтожения нацией Огня. Со&nbsp;своими новыми друзьями, Катарой и&nbsp;Соккой, Аанг отправляется овладевать стихиями, попутно их&nbsp;преследует изгнанный принц нации Огня&nbsp;&mdash; Зуко, который хочет вернуть себе честь, поймав Аватара.          </p>
         </div>
 
-        <img class="about__img" src="images/aboutImg.svg" alt="Screenshot from movie">
+        <picture class="about__pic">
+          <source media="(max-width: 320px)" srcset="images/aang320.jpeg">
+          <source media="(max-width: 768px)" srcset="images/aang768.jpeg">
+          <source media="(max-width: 1024px)" srcset="images/aang1024.jpeg">
+          <img class="about__image" src="images/aang1440.jpeg" alt="Аанг на Аппе">
+        </picture>
+        <!-- если картинка - контент, то такой вариант, если - нет, то через css -->
+
       </div>
     </section>
     <section class="trailers" id="trailers">
       <div class="container">
         <ul class="trailers__buttons">
           <li class="trailers__item-button">
-            <button class="trailers__button trailers__button_active">трейлер 1</button>
+            <button class="trailers__button trailers__button_active" aria-label="Первый трейлер">трейлер 1</button>
           </li>
           <li class="trailers__item-button">
-            <button class="trailers__button">трейлер 2</button>
+            <button class="trailers__button" aria-label="Второй трейлер">трейлер 2</button>
           </li>
           <li class="trailers__item-button">
-            <button class="trailers__button">трейлер 3</button>
+            <button class="trailers__button" aria-label="Третий трейлер">трейлер 3</button>
           </li>
         </ul>
 
@@ -84,7 +96,7 @@
         </li>
       </ul>
 
-      <p class="footer__copyright">© ПРОКИНО, 2024</p>
+      <p class="footer__copyright">&copy;&nbsp;ПРОКИНО, 2024</p>
 
       <img class="footer__logo" src="images/logo.svg" alt="Логотип ПРО КИНО">
     </div>
