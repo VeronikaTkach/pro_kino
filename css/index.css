@@ -1,3 +1,7 @@
+:root {
+  scroll-behavior: smooth;  /* плавность прокрутки без js */
+}
+
 @font-face {
   font-family: Inter;
   font-weight: 400;
@@ -151,7 +155,7 @@ iframe {
 }
 
 .hero {
-  padding: 404px 0 120px 0;
+  padding: 404px 0 60px 0;
 }
 
 .hero__container {
@@ -199,9 +203,94 @@ iframe {
   font-size: 20px;
 }
 
-.about__pic {
+.about__container::after {
+  content: '';
   flex-basis: 530px;
+  background-image: url('../images/aang.jpg');
+  background-image: -webkit-image-set(
+    url('../images/aang@2x.avif') type('image/avif') 2x,
+    url('../images/aang.avif') type('image/avif') 1x,
+    url('../images/aang@2x.webp') type('image/webp') 2x,
+    url('../images/aang.webp') type('image/webp') 1x,
+    url('../images/aang@2x.jpg') 2x,
+    url('../images/aang.jpg') 1x
+  );
+  background-image: image-set(
+    url('../images/aang@2x.avif') type('image/avif') 2x,
+    url('../images/aang.avif') type('image/avif') 1x,
+    url('../images/aang@2x.webp') type('image/webp') 2x,
+    url('../images/aang.webp') type('image/webp') 1x,
+    url('../images/aang@2x.jpg') 2x,
+    url('../images/aang.jpg') 1x
+  );
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
+@media (max-width: 1024px) {
+  .about {
+    padding: 50px 0;
+  }
+
+  .about__container::after {
+    flex-basis: 50%;
+    background-image: url('../images/aang1024.jpg');
+  }
+
+  .about__content {
+    flex-basis: 50%;
+  }
+
+  .about__title {
+    font-size: 40px;
+    margin-bottom: 24px;
+  }
+
+  .about__text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about__container {
+    flex-direction: column;
+  }
+
+  .about__content {
+    flex-basis: auto;
+  }
+
+  .about__container::after {
+    flex-basis: 300px;
+    background-image: url('../images/aang768.jpg');
+  }
+
+  .about__title {
+    max-width: 370px;
+  }
+}
+
+@media (max-width: 320px) {
+  .about {
+    padding: 30px 0;
+  }
+  
+  .about__container::after {
+    background-image: url('../images/aang320.jpg');
+  }
+
+  .about__title {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+}
+
+
+/* .about__pic {
+  flex-basis: 530px;
+} для варианта с html*/
+
 
 .trailers {
   padding: 60px 0 120px;
