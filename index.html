@@ -20,7 +20,7 @@
     <div class="container header__container">
       <img class="header__logo" src="images/logo.svg" alt="Логотип ПРО КИНО">
 
-      <a class="header__link" href="#trailers">Смотреть трейлер</a>
+      <a class="header__link link-show-trailer" href="#trailers">Смотреть трейлер</a>
     </div>
   </header>
 
@@ -34,20 +34,24 @@
           <time datetime="2024-02-22">22 февраля</time>
         </p>
 
+        <a class="hero__link link-show-trailer" href="#trailers">Смотреть трейлер</a>
+
         <a class="hero__arrow" href="#about">
-          <svg width="64.000000" height="64.000000" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <circle id="Ellipse 1" cx="32.000000" cy="32.000000" r="31.500000" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="1.000000"/>
-            <path id="Vector" d="M20.1921 26.4548C20.1921 26.2532 20.2719 26.0469 20.4265 25.8922C20.7358 25.5829 21.2422 25.5829 21.5515 25.8922L32.1406 36.4813L42.575 26.0469C42.8843 25.7375 43.3906 25.7375 43.7 26.0469C44.0093 26.3563 44.0093 26.8625 43.7 27.1719L32.7031 38.1735C32.3937 38.4829 31.8875 38.4829 31.5781 38.1735L20.4265 27.0219C20.2671 26.8625 20.1921 26.661 20.1921 26.4548Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <circle id="Ellipse 1" cx="32" cy="32" r="31.5" stroke="currentColor" stroke-opacity="1" stroke-width="1"/>
+            <path id="Vector" d="M20.1921 26.4548C20.1921 26.2532 20.2719 26.0469 20.4265 25.8922C20.7358 25.5829 21.2422 25.5829 21.5515 25.8922L32.1406 36.4813L42.575 26.0469C42.8843 25.7375 43.3906 25.7375 43.7 26.0469C44.0093 26.3563 44.0093 26.8625 43.7 27.1719L32.7031 38.1735C32.3937 38.4829 31.8875 38.4829 31.5781 38.1735L20.4265 27.0219C20.2671 26.8625 20.1921 26.661 20.1921 26.4548Z" fill="currentColor" fill-opacity="1.000000" fill-rule="nonzero"/>
           </svg>
+        </a>
       </div>
     </section>
     <section class="about" id="about">
       <div class="container about__container">
         <div class="about__content">
-          <h2 class="about__title">Аватар: Легенда об&nbsp;Аанге</h2>
+          <h2 class="about__title">Аватар: Легенда&nbsp;об&nbsp;Аанге</h2>
 
           <p class="about__text">
-            Сюжет рассказывает о&nbsp;мальчике из&nbsp;племени воздушных кочевников, Аанге, способном покорять стихию воздуха. В&nbsp;возрасте 11&nbsp;лет, он&nbsp;узнал, что он&nbsp;Аватар&nbsp;&mdash; властелин четырёх стихий. Мир погряз в&nbsp;многолетней войне нации Огня против остального мира, в&nbsp;котором определённые люди способны покорять одну из&nbsp;четырёх стихий&nbsp;&mdash; воду, землю, огонь или воздух. Аанг&nbsp;&mdash; единственный, кто способен покорить все элементы и&nbsp;будучи Аватаром, он&nbsp;должен спасти мир от&nbsp;уничтожения нацией Огня. Со&nbsp;своими новыми друзьями, Катарой и&nbsp;Соккой, Аанг отправляется овладевать стихиями, попутно их&nbsp;преследует изгнанный принц нации Огня&nbsp;&mdash; Зуко, который хочет вернуть себе честь, поймав Аватара.          </p>
+            Сюжет рассказывает о&nbsp;мальчике из&nbsp;племени воздушных кочевников, Аанге, способном покорять стихию воздуха. В&nbsp;возрасте 11&nbsp;лет, он&nbsp;узнал, что он&nbsp;Аватар&nbsp;&mdash; властелин четырёх стихий. Мир погряз в&nbsp;многолетней войне нации Огня против остального мира, в&nbsp;котором определённые люди способны покорять одну из&nbsp;четырёх стихий&nbsp;&mdash; воду, землю, огонь или воздух. Аанг&nbsp;&mdash; единственный, кто способен покорить все элементы и&nbsp;будучи Аватаром, он&nbsp;должен спасти мир от&nbsp;уничтожения нацией Огня. Со&nbsp;своими новыми друзьями, Катарой и&nbsp;Соккой, Аанг отправляется овладевать стихиями, попутно их&nbsp;преследует изгнанный принц нации Огня&nbsp;&mdash; Зуко, который хочет вернуть себе честь, поймав Аватара.          
+          </p>
         </div>
 
         <!-- <picture class="about__pic">
@@ -61,7 +65,7 @@
       </div>
     </section>
     <section class="trailers" id="trailers">
-      <div class="container">
+      <div class="container trailers__container">
         <ul class="trailers__buttons">
           <li class="trailers__item-button">
             <button class="trailers__button trailers__button_active" aria-label="Первый трейлер">трейлер 1</button>
@@ -72,12 +76,25 @@
           <li class="trailers__item-button">
             <button class="trailers__button" aria-label="Третий трейлер">трейлер 3</button>
           </li>
+          <li class="trailers__item-button">
+            <button class="trailers__button" aria-label="Третий трейлер">трейлер 3</button>
+          </li>
         </ul>
 
         <ul class="trailers__list">
           <li class="trailers__item">
             <div class="trailers__wrapper">
               <iframe class="trailers__video" src="https://www.youtube.com/embed/ByAn8DF8Ykk" title="YouTube video player" frameborder="0"></iframe>
+            </div>
+          </li>
+          <li class="trailers__item">
+            <div class="trailers__wrapper">
+              <iframe class="trailers__video" src="https://www.youtube.com/embed/8hmw3AtjPKA?si=430RcOp1FD_IvWY5" title="YouTube video player" frameborder="0"></iframe>            
+            </div>
+          </li>
+          <li class="trailers__item">
+            <div class="trailers__wrapper">
+              <iframe class="trailers__video" src="https://www.youtube.com/embed/xEmlE9Ianuo?si=ATyooMZq_neQrqxb" title="YouTube video player" frameborder="0"></iframe>
             </div>
           </li>
         </ul>
