@@ -7,10 +7,16 @@
   <link rel="icon" href="images/camera.svg">
   <!-- рекомендуется добавлять несколько строк с разными форматами иконок -->
 
+  <link rel="preload" href="fonts/inter-v13-cyrillic_latin-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/inter-v13-cyrillic_latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="prefetch" href="images/aang.avif" as="image" type="image/avif"> <!-- для первоначальной быстрой загрузки шрифтов и картинки -->
+
   <link rel="stylesheet" href="css/normalize.css">
   <!-- для улучшения разметки под разные браузеры -->
 
   <link rel="stylesheet" href="css/index.css">
+
+  <script src="js/index.js" defer></script>
 
   <title>ПРО КИНО - Аватар: Легенда об Аанге</title>
 
@@ -68,34 +74,22 @@
       <div class="container trailers__container">
         <ul class="trailers__buttons">
           <li class="trailers__item-button">
-            <button class="trailers__button trailers__button_active" aria-label="Первый трейлер">трейлер 1</button>
+            <button 
+            class="trailers__button trailers__button_active" 
+            aria-label="Первый трейлер"
+            data-src="https://www.youtube.com/embed/ByAn8DF8Ykk">трейлер 1</button>
           </li>
           <li class="trailers__item-button">
-            <button class="trailers__button" aria-label="Второй трейлер">трейлер 2</button>
+            <button 
+            class="trailers__button" 
+            aria-label="Второй трейлер"
+            data-src="https://www.youtube.com/embed/8hmw3AtjPKA?si=430RcOp1FD_IvWY5">трейлер 2</button>
           </li>
           <li class="trailers__item-button">
-            <button class="trailers__button" aria-label="Третий трейлер">трейлер 3</button>
-          </li>
-          <li class="trailers__item-button">
-            <button class="trailers__button" aria-label="Третий трейлер">трейлер 3</button>
-          </li>
-        </ul>
-
-        <ul class="trailers__list">
-          <li class="trailers__item">
-            <div class="trailers__wrapper">
-              <iframe class="trailers__video" src="https://www.youtube.com/embed/ByAn8DF8Ykk" title="YouTube video player" frameborder="0"></iframe>
-            </div>
-          </li>
-          <li class="trailers__item">
-            <div class="trailers__wrapper">
-              <iframe class="trailers__video" src="https://www.youtube.com/embed/8hmw3AtjPKA?si=430RcOp1FD_IvWY5" title="YouTube video player" frameborder="0"></iframe>            
-            </div>
-          </li>
-          <li class="trailers__item">
-            <div class="trailers__wrapper">
-              <iframe class="trailers__video" src="https://www.youtube.com/embed/xEmlE9Ianuo?si=ATyooMZq_neQrqxb" title="YouTube video player" frameborder="0"></iframe>
-            </div>
+            <button 
+            class="trailers__button" 
+            aria-label="Третий трейлер"
+            data-src="https://www.youtube.com/embed/xEmlE9Ianuo?si=ATyooMZq_neQrqxb">трейлер 3</button>
           </li>
         </ul>
       </div>
