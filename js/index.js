@@ -18,7 +18,6 @@ const createListTrailers = (parent, srcList) => {
 
     const trailersVideo = document.createElement('iframe');
     trailersVideo.classList.add('trailers__video');
-    trailersVideo.dataset.src = src;
     trailersWrapper.append(trailersVideo);
     trailersFrames.push(trailersVideo);
 
@@ -43,6 +42,10 @@ const createListTrailers = (parent, srcList) => {
           left: 0;
           width: 100%;
           height: 100%;
+        }
+
+        a {
+          cursor: default;
         }
         
         #button {
@@ -84,10 +87,10 @@ const createListTrailers = (parent, srcList) => {
 const controlTrailer = (trailersWrappers, trailersFrames, i = 0, j = 0) => {
   if (i !== j) {
     trailersWrappers[i].style.display = 'none';
-    trailersFrames[i].src = '';
+    trailersFrames[i].srcdoc = '';
   } else {
     trailersWrappers[i].style.display = 'block';
-    trailersFrames[i].src = trailersFrames[i].dataset.src;
+    trailersFrames[i].srcdoc = trailersFrames[i].dataset.srcdoc;
   }
 }
 
@@ -112,6 +115,7 @@ const init = () => {
     );
 
   trailersButtons.forEach((btn, j) => {
+    trailersFrames[j].dataset.srcdoc = trailersFrames[j].srcdoc;
     btn.addEventListener('click', () => {
       trailersButtons.forEach((tBtn, i) => {
         if (tBtn === btn) {
